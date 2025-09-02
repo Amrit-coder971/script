@@ -1,0 +1,24 @@
+// single line comment
+/*multi-line comment
+this is a mult-line comment that spans multiple lines */
+
+//data types
+let numberTypeVariable =45; //number
+let string ="hellow world"; // string
+let BooleantypesVariable=true;// Boolean
+let arrayTypesVariable=[1,"a", true]//array
+let objectTypesVariable={"name":'ram'age:42};//object
+let nulTypesvarialble=null; //null
+let undefinedTypesVarible; // undefined
+
+  types of 123 int  
+
+if 
+else
+else if
+switch(expression){
+case a;
+//statement 
+
+//document.write
+
