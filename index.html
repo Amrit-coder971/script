@@ -13,16 +13,23 @@
             background-color: #fff;
             color: #000;
         }
+        li.completed{
+            text-decoration: line-through;
+            color: green;
+        }
+        li{
+            cursor: pointer;
+        }
     </style>
 </head>
 <body class="light-mode">
     <button type="button" id="mode-toggler" class="dark">Switch to dark mode</button>
 
     <h1>To do list</h1>
-    <form action="">
+    <form action="" onsubmit="handleSubmit()">
         <input type="text" placeholder="item" 
-            id="item-input" value="">
-        <button type="button" onclick="handleAdd()">Add</button>
+            id="item-input">
+        <button type="submit"">Add</button>
     </form>
     <ol id = "todo-lists"></ol>
    

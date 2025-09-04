@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+        <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f7f8;
+            margin: 0;
+            padding: 20px;
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+
+        form {
+            max-width: 500px;
+            margin: 0 auto;
+            padding: 30px;
+            background-color: #ffffff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        label {
+            display: block;
+            margin-bottom: 6px;
+            font-weight: bold;
+            color: #555;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="number"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+            font-size: 14px;
+        }
+
+        button {
+            width: 100%;
+            background-color: #4CAF50;
+            color: white;
+            padding: 12px;
+            border: none;
+            border-radius: 4px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #09ee15;
+        } 
+</style>
+</head>
+<body>
+    <h1>Student Registion</h1>
+     <form action="">  
+        <label for="First_Name">First name:</label><br>
+        <input type="text" placeholder="First_Name">
+        <label for="Middle_Name"> Middle name:</label>
+        <input type="text" placeholder="Middle_Name">
+        <label for="Last_Name"> Last name:</label><br>
+        <input type="text" placeholder="Last_Name"><br>
+        <label for="Email"> Email:</label><br>
+        <input type="email" placeholder="Email"><br>
+        <label for="Phone_number">Phone_number</label>
+        <input type="phone" placeholder="Phone_number"><br>
+        <label type="Semester">Semester</label>
+        <input type="number" placeholder="Semester">
+        <button type="submit">Submit</button>
+    </form>
+</body>
+</html>

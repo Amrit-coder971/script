@@ -1,50 +1,59 @@
+
+
 const STORAGE_KEY= "todos";
 
 let todos = JSON.parse(localStorage.getItem(STORAGE_KEY)) || [];
 
 const listEl = document.querySelector('#todo-lists');
 
-const  list = document.querySelector("#todo-list");
 
-todo.forEach(todo,index) => { 
-    const liEl= document.createElementNS("Li");
-    liEl.setAttribute(`id`,`listitem-$(index)`);
+todos.forEach((todo, index) => {
+    const liEl = document.createElement('li');
+    liEl.setAttribute('id', `listitem-${index}`);
+
     liEl.innerText = todo.value;
 
     if(todo.checked){
         liEl.classList.add("completed");
     }
 
-}
+    listEl.appendChild(liEl);
+
+    liEl.addEventListener('click', (event) => {
+        todos[index] = {value: todo.value, checked: !todo.checked}
+
+        localStorage.setItem(STORAGE_KEY, JSON.stringify(todos));
+
+        window.location.reload();
+
+    })
+})
 
 
+const handleSubmit = () => {
+    const inputEl = document.getElementById("item-input");
+    const inputValue = inputEl.value.trim();
 
-
-
-
-
-
-
-
-// function handleAdd() {
-   //  const inputEl = document.getElementById("item-input");
-
-
-    if(inputEl != ""){
-        todos.push(inputEl.value);
+    if(inputValue != ""){
+        todos.push({value: inputValue, checked: true});
         inputEl.value="";
     
         localStorage.setItem(STORAGE_KEY, JSON.stringify(todos));
-    
-        listEl.innerHTML = 
-        `${todos.map(todo => 
-        `<li id="todo-${todos.indexOf(todo)}"> ${todo} 
-        </li>`)}`; 
     }
+}
+
+// function handleAdd() {
+//     const inputEl = document.getElementById("item-input");
+
+//     if(inputEl != ""){
+//         todos.push(inputEl.value);
+//         inputEl.value="";
+    
+//         localStorage.setItem(STORAGE_KEY, JSON.stringify(todos));
+//     }
 
 
-
-
+// }
 
 
 
@@ -61,4 +70,3 @@ togglerEl.addEventListener("click", function(event){
         togglerEl.innerText = "Change to light mode";
     }
 });
-
