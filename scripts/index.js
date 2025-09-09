@@ -33,7 +33,7 @@ todos.forEach((todo, index) => {
 const handleSubmit = () => {
     const inputEl = document.getElementById("item-input");
     const inputValue = inputEl.value.trim();
-
+s
     if(inputValue != ""){
         todos.push({value: inputValue, checked: true});
         inputEl.value="";
