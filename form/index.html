@@ -1,87 +1,81 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-        <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f4f7f8;
-            margin: 0;
-            padding: 20px;
-        }
-
-        h1 {
-            text-align: center;
-            color: #333;
-        }
-
-        form {
-            max-width: 500px;
-            margin: 0 auto;
-            padding: 30px;
-            background-color: #ffffff;
-            border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        }
-
-        label {
-            display: block;
-            margin-bottom: 6px;
-            font-weight: bold;
-            color: #555;
-        }
-
-        input[type="text"],
-        input[type="email"],
-        input[type="number"] {
-            width: 100%;
-            padding: 10px;
-            margin-bottom: 15px;
-            border: 1px solid #ccc;
-            border-radius: 4px;
-            box-sizing: border-box;
-            font-size: 14px;
-        }
-
-        button {
-            width: 100%;
-            background-color: #4CAF50;
-            color: white;
-            padding: 12px;
-            border: none;
-            border-radius: 4px;
-            font-size: 16px;
-            cursor: pointer;
-        }
-
-        button:hover {
-            background-color: #09ee15;
-        } 
-</style>
+  <meta charset="UTF-8">
+  <title>Student Information Form</title>
+  <style>
+    .error{
+      font-size: 14px;
+      color: red;
+    }
+  </style>
 </head>
 <body>
-    <h1>Student Registion</h1>
-     <form action="#" methon="post" id="Student-form">  
-        <label for="First_Name">First name:</label><br>
-        <input type="text" placeholder="First_Name">
-        <span class="error" id="fnameError"></span>
+  <h2>Student Information Form</h2>
+  <form action="#" method="post" id="student-form">
+    <!-- Name Fields -->
+    <label for="fname">First Name *:</label>
+    <input type="text" id="fname" name="fname">
+    <span class="error" id="fnameError"></span>
+    <br><br>
 
-        <label for="Middle_Name"> Middle name:</label>
-        <input type="text" placeholder="Middle_Name">
-        <label for="Last_Name"> Last name:</label><br>
-        <input type="text" placeholder="Last_Name"><br>
-        <label for="Email"> Email:</label><br>
-        <input type="email" placeholder="Email"><br>
-        <label for="Phone_number">Phone_number</label>
-        <input type="phone" placeholder="Phone_number"><br>
-        <label type="Semester">Semester</label>
-        <input type="number" placeholder="Semester">
-        <button type="submit">Submit</button>
-    </form>
-    <pre></pre>
-        <script src="form/script.js"> </script>
+    <label for="mname">Middle Name:</label>
+    <input type="text" id="mname" name="mname"><br><br>
+
+    <label for="lname">Last Name *:</label>
+    <input type="text" id="lname" name="lname">
+    <span class="error" id="lnameError"></span><br><br>
+
+    <!-- Address -->
+    <label for="address">Address:</label><br>
+    <textarea id="address" name="address" rows="3" cols="30"></textarea>
+    <span class="error" id="addressError"></span><br><br>
+
+    <!-- Email -->
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email">
+    <span class="error" id="emailError"></span><br><br>
+
+
+    <!-- Phone -->
+    <label for="phone">Phone Number:</label>
+    <input type="tel" id="phone" name="phone">
+    <span class="error" id="phoneError"></span><br><br>
+
+    <!-- Gender -->
+    <label>Gender:</label>
+    <input type="radio" id="male" name="gender" value="male">
+    <label for="male">Male</label>
+    <input type="radio" id="female" name="gender" value="female">
+    <label for="female">Female</label>
+    <input type="radio" id="other" name="gender" value="other">
+    <label for="other">Other</label>
+    <span class="error" id="genderError"></span>
+    <br><br>
+
+    <!-- Semester -->
+    <label for="semester">Semester:</label>
+    <select id="semester" name="semester">
+      <option value="">--Select Semester--</option>
+      <option value="1">1st</option>
+      <option value="2">2nd</option>
+      <option value="3">3rd</option>
+      <option value="4">4th</option>
+      <option value="5">5th</option>
+      <option value="6">6th</option>
+      <option value="7">7th</option>
+      <option value="8">8th</option>
+    </select><br><br>
+
+    <!-- Buttons -->
+    <input type="submit" value="Submit">
+    <input type="reset" value="Reset">
+
+  </form>
+
+  <pre id="data"></pre>
+
+  <script src="script.js"> </script>
 
 </body>
 </html>
